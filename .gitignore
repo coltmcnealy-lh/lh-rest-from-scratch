@@ -1,0 +1,9 @@
+*~
+*.class
+
+email-worker/app/bin
+it-request-workflow/app/bin
+email-worker/app/build
+email-worker/.gradle
+it-request-workflow/build
+it-request-workflow/.gradle
