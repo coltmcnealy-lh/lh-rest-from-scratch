@@ -64,6 +64,5 @@ public class EmailSender {
         } else {
             throw new RuntimeException("Failed to send the email: %s".formatted(response.getBody()));
         }
-
     }
 }

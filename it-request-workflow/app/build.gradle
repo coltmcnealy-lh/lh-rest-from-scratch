@@ -9,6 +9,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'com.diffplug.spotless' version '6.25.0'
 }
 
 repositories {
@@ -17,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.littlehorse:littlehorse-client:0.10.0'
+    implementation 'io.littlehorse:littlehorse-client:0.11.2'
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
@@ -28,3 +29,10 @@ application {
     mainClass = 'it.request.workflow.App'
 }
 
+spotless {
+    java {
+        target('**/*.java')
+        targetExclude('**/proto/*.java')
+        palantirJavaFormat()
+    }
+}

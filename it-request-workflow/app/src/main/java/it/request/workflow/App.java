@@ -4,8 +4,8 @@
 package it.request.workflow;
 
 import io.littlehorse.sdk.common.config.LHConfig;
-import io.littlehorse.sdk.common.proto.PutUserTaskDefRequest;
 import io.littlehorse.sdk.common.proto.LittleHorseGrpc.LittleHorseBlockingStub;
+import io.littlehorse.sdk.common.proto.PutUserTaskDefRequest;
 import io.littlehorse.sdk.usertask.UserTaskSchema;
 import io.littlehorse.sdk.usertask.annotations.UserTaskField;
 
@@ -27,7 +27,6 @@ class ITRequestApprovalForm {
     @UserTaskField(required = true, description = "True if request is approved")
     public boolean isApproved;
 }
-
 
 public class App {
     public static void main(String[] args) {
